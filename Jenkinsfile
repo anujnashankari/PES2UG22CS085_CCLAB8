@@ -1,11 +1,11 @@
 pipeline {
-    agent any  
+    agent any
 
     stages {
         stage('Build') {
             steps {
                 script {
-                    sh 'g++ -o PES2UG22CS085-1 hello.cpp'
+                    sh 'g++ -o PES2UG22CS085-1 hello_WRONG.cpp'
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
 
     post {
         failure {
-            echo "Pipeline failed!" 
+            echo "Pipeline failed!"
         }
     }
 }
